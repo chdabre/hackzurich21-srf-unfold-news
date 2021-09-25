@@ -1,0 +1,11 @@
+.v-app-bar {
+  .v-toolbar__content {
+    justify-content: center;
+  }
+}
+
+.text-overline {
+  font-weight: 600!important;
+}
+
+@import "./components";

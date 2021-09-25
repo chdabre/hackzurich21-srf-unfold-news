@@ -1,0 +1,10 @@
+.story-container {
+  height: 450px;
+  padding: 48px 16px;
+  margin-bottom: 16px;
+
+  background: rgb(255,255,255);
+  $gradient-size: 32px;
+  $bg-color: var(--bg-color);
+  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, $bg-color $gradient-size, $bg-color calc(100% - #{$gradient-size}), rgba(255,255,255,0) 100%);
+}
