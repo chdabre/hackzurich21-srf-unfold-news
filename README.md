@@ -21,7 +21,7 @@ The data SRF already delivered allowed for smooth linking between multiple sourc
 
 ## Technology
 
-This functional prototype is built with [Vue.js](https://vuejs.org/), [Vuetify](https://vuetifyjs.com/en/) and hosted on [Google Firebase](https://firebase.google.com/).
+This [functional prototype](https://unfold-news.web.app) is built with [Vue.js](https://vuejs.org/), [Vuetify](https://vuetifyjs.com/en/) and hosted on [Google Firebase](https://firebase.google.com/).
 
 Features:
 - Recursive Node-Tree REST API design with full mock implementation
