@@ -102,6 +102,30 @@ export default function (server) {
                     text: 'Vorallem im letzten Monat stieg der Wasserstand extrem an. Seit 1956 wurde nichtmehr so ein hoher Wasserstand im Vierwaldstättersee gemessen.'
                 },
                 span: '6',
+                actions: [
+                    server.create('widget', {
+                        type: 'video',
+                        title: 'Vierwaldstättersee',
+                        subtitle: 'Tagesschau Spezial',
+                        span: '6',
+                        data: {
+                            text: 'Guy Parmelin beobachtet die Situation am Vierwaldstättersee kritisch. Schutzmassnahmen wurden getroffen.',
+                            videoUrl: '/media/media03.mp4',
+                        },
+                        actions:[
+                            server.create('widget', {
+                                type: 'audio',
+                                title: 'Kritische Lage',
+                                subtitle: 'Rendez-Vous Beitrag',
+                                data: {
+                                    imageUrl: '/media/media07.png',
+                                    audioUrl: '/media/20210716_Hochwasserlage_Zentralschweiz.wav',
+                                    text: '"Der See ist in der Nacht deutlich angestiegen.” - Guy Parmelin, Bundesrat'
+                                },
+                                span: '12',})
+                        ]
+                    })
+                ]
             })
         ]
     });
@@ -138,6 +162,7 @@ export default function (server) {
                             imageUrl: '/media/obelix.jpeg',
                             text: '"Die Spinnen doch die Römer!"' },
                         actions:[
+
                         ]
                     }),
                 ]
