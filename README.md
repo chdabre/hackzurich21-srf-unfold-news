@@ -1,4 +1,15 @@
-# unfold-news
+
+![GitHub Logo](./docs/logo_unfold.png)
+
+HackZurich 2021
+
+Devpost
+
+:collision: Demo: https://unfold-news.web.app
+
+## Technology
+
+This functional prototype is built with Vue.js, Vuetify and hosted on Google Firebase.
 
 ## Project setup
 ```
