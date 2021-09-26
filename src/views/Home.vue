@@ -1,36 +1,58 @@
 <template>
-  <div>
-    <div class="story-container" style="--bg-color: #F8E2DC">
-      <span class="text-overline">CORONA + FREIHEIT</span>
-      <v-row>
-        <v-col>
-          <div class="media media--video">
-
-          </div>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
-          <div class="action" v-ripple @click="console.log('c')">
-            Action
-          </div>
-        </v-col>
-        <v-col>
-          <div class="action" v-ripple @click="console.log('c')">
-            Action
-          </div>
-        </v-col>
-      </v-row>
-    </div>
-    <div class="story-container" style="--bg-color: #B2BCD0">
-      Story
-    </div>
+  <div class="stories">
+    <story
+        v-for="(story, i) in stories" :key="story.id"
+        :story="story"
+        :color="getColor(i)"
+    ></story>
   </div>
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
+
+import Story from '@/components/Story';
+import storiesApi from '@/api/stories';
+
+const storyColors = shuffle(['#DFEDED', '#FFF0D6', '#B2BCD0']);
+
 export default {
   name: 'Home',
+  components: { Story },
+  data() {
+    return {
+      clicked: false,
+      stories: [],
+    };
+  },
+  async created() {
+    this.stories = await storiesApi.loadStories();
+    this.SET_LOADED(true);
+  },
+  methods: {
+    ...mapMutations(['SET_LOADED']),
+    getColor(i) {
+      return storyColors[i % storyColors.length];
+    }
+  }
+}
+
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex !== 0) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
 }
 </script>
 

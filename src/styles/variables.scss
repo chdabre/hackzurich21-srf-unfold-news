@@ -1,17 +1,18 @@
 @import "~vuetify/src/styles/settings/variables";
 
 // Vuetify Overrides
-$body-font-family: 'Montserrat', sans-serif;
-$alternate-font-family: 'Oswald', 'Montserrat', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;500;600;700&display=swap');
+$body-font-family: 'Open Sans', sans-serif;
+$alternate-font-family: 'Merriweather', serif;
 
 $headings: (
-  'h6': (
-    'font-family': $body-font-family,
+  'h5': (
+    'font-family': $alternate-font-family,
   ),
-  'button': (
+  'h6': (
     'font-family': $alternate-font-family,
   ),
 );
 
 $alert-border-width: 6px;
-$grid-gutter: $spacer * 4;
+$grid-gutter: $spacer * 3;

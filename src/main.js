@@ -6,9 +6,16 @@ import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false
 
-new Vue({
-  router,
-  store,
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')
+async function runApp() {
+  const runMirageServer = (await import('@/api/mocks'/* webpackChunkName: "dev" */)).default;
+  runMirageServer();
+
+  new Vue({
+    router,
+    store,
+    vuetify,
+    render: (h) => h(App),
+  }).$mount('#app');
+}
+
+runApp();

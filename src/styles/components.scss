@@ -1,5 +1,4 @@
-.story-container {
-  height: 450px;
+.story {
   padding: 48px 16px;
   margin-bottom: 16px;
 
@@ -7,4 +6,24 @@
   $gradient-size: 32px;
   $bg-color: var(--bg-color);
   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, $bg-color $gradient-size, $bg-color calc(100% - #{$gradient-size}), rgba(255,255,255,0) 100%);
+
+  transition: all 0.35s;
+}
+
+.story-widget-container {
+  transition: all 0.5s;
+}
+
+.story-widget {
+  border-radius: 18px;
+  min-height: 72px;
+
+  border: .75px solid rgba(0,0,0,.05);
+  box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.1);
+
+  .media {
+    padding: 12px;
+  }
+
+  background-color: white;
 }
