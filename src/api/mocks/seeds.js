@@ -128,6 +128,19 @@ export default function (server) {
                         '\n' +
                         'Gegründet wurde die Gruppierung mit Sitz Altendorf SZ laut eigenen Angaben, um sich für verfassungsmässige Rechte einzusetzen. Nach dem deutlichen Ja des Schweizer Stimmvolkes zum Covid-Gesetz im Juni sprachen sie von einem «Rückschlag».',
                 },
+                actions:[
+                    server.create('widget', {
+                        type: 'article',
+                        title: 'Obelix',
+                        subtitle: 'Zitat',
+                        span: '6',
+                        data: {
+                            imageUrl: '/media/obelix.jpeg',
+                            text: '"Die Spinnen doch die Römer!"' },
+                        actions:[
+                        ]
+                    }),
+                ]
             }),
             server.create('widget', {
                 type: 'article',
@@ -140,6 +153,21 @@ export default function (server) {
                         '\n' +
                         'Der F-35-Jet schneidet laut Informationen der Rundschau von letzter Woche bei den Kosten besonders gut ab – für einige Beobachter überraschend. Laut Hersteller Lockheed Martin kann der Jet wesentlich mehr als seine Mitbewerber. Deshalb stellt sich auch die Frage, ob es überhaupt die vom VBS angestrebte maximale Stückzahl von 40 Flugzeugen braucht. Oder ob auch weniger Flugzeuge den Schweizer Luftraum schützen könnten.',
                 },
+                actions:[
+                    server.create('widget', {
+                        type: 'audio',
+                        title: 'Bestmögliche Schätzung?',
+                        subtitle: ' Echo',
+                        span: '6',
+                        data: {
+                            audioUrl: '/media/kampfjet.mp3',
+                            imageUrl: '/media/f35.jpeg',
+                            text: 'Das VBS sagt, die Schweiz habe mit den USA Fixpreise für den Kampfjet vereinbart. Wie das möglich sein soll, bleibt ein Rätsel.'},
+                        actions:[
+
+                        ]
+                    })
+                ]
             })
         ],
     });
