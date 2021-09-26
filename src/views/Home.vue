@@ -62,10 +62,6 @@ function shuffle(array) {
   border-radius: 18px;
   min-height: 180px;
   border: 1px solid rgba(0,0,0,0.2);
-
-  &--video {
-
-  }
 }
 
 
